@@ -179,7 +179,7 @@ class MbitcoinController extends Controller
        $package->name = $name;
        $package->phone = $phone;
        $package->groups = $groups;
-       $package->income_time = date("Y-m-d H:i:s", strtotime('+10 hour'));
+       $package->income_time = date('Y-m-d H:i:s', strtotime('+7 hour'));
        $package->save();
 
        $get_all_count = DB::table('members')
@@ -214,7 +214,7 @@ class MbitcoinController extends Controller
      $arr['name'] = $get_data->name;
      $arr['phone'] = $get_data->phone;
      $arr['company'] = $get_data->company;
-     $arr['income_time'] = $get_data->income_time;
+     $arr['income_time'] = date('Y-m-d H:i:s', strtotime('+7 hour'));
      $arr['groups'] = $get_data->groups;
 
      $arr['success'] = true;
@@ -273,7 +273,8 @@ class MbitcoinController extends Controller
             'company' => $company,
             'name' => $name_user,
             'phone' => $phone,
-            'admin_id' => $request['admin_id']
+            'admin_id' => $request['admin_id'],
+            'income_time' => date('Y-m-d H:i:s', strtotime('+7 hour'))
           ));
 
           if($request['status_user'] == 1){
@@ -308,7 +309,7 @@ class MbitcoinController extends Controller
           $arr['name'] = $get_data->name;
           $arr['phone'] = $get_data->phone;
           $arr['company'] = $get_data->company;
-          $arr['income_time'] = $get_data->income_time;
+          $arr['income_time'] = date('Y-m-d H:i:s', strtotime('+7 hour'));
           $arr['groups'] = $get_data->groups;
           $arr['success'] = true;
 
