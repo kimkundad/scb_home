@@ -187,7 +187,13 @@ white-space: normal;
 
 
 
-
+                         @if($u->confirmed == 1)
+                         <a style="float:left; margin-right:3px; margin-top:5px;"
+                         class="btn btn-success btn-xs " role="button"><i class="fa fa-user"></i> </a>
+                         @else
+                         <a style="float:left; margin-right:3px; margin-top:5px;"
+                         class="btn btn-danger btn-xs " role="button"><i class="fa fa-user"></i> </a>
+                         @endif
 
                          <a style="float:left; margin-right:3px; margin-top:5px;" target="_blank"
                          class="btn btn-primary btn-xs modal-sizes" href="#modalSM-{{$u->id}}" role="button"><i class="fa fa-wrench"></i> </a>
