@@ -25,14 +25,13 @@ class MbitcoinController extends Controller
     public function index()
     {
 
-      $count_user = member::where('members.confirmed', 0)->count();
+      $count_user = member::->count();
 
       //$objs = bitcoin::paginate(15);
       $objs = DB::table('members')
                 ->select(
                 'members.*'
                 )
-                ->where('members.confirmed', 0)
                 ->orderBy('members.id','ASC')
                 ->paginate(15);
 
