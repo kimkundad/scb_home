@@ -184,7 +184,13 @@ white-space: normal;
 
                       <td>
 
-
+                        @if($u->confirmed == 1)
+                        <a style="float:left; margin-right:3px; margin-top:5px;"
+                        class="btn btn-success btn-xs " role="button"><i class="fa fa-user"></i> </a>
+                        @else
+                        <a style="float:left; margin-right:3px; margin-top:5px;"
+                        class="btn btn-danger btn-xs " role="button"><i class="fa fa-user"></i> </a>
+                        @endif
 
 
 
