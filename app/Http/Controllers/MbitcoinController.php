@@ -25,7 +25,9 @@ class MbitcoinController extends Controller
     public function index()
     {
 
-      $count_user = member::->count();
+
+      $count_user = DB::table('members')
+                ->count();
 
       //$objs = bitcoin::paginate(15);
       $objs = DB::table('members')
