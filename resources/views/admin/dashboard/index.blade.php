@@ -50,6 +50,13 @@ white-space: normal;
     color: #333333;
     font-weight: 500;
 }
+.bg-quaternary {
+    background: #734BA9;
+    color: #FFF;
+}
+.panel-featured-quaternary {
+    border-color: #734BA9;
+}
 </style>
 @stop('admin.stylesheet')
 
@@ -160,11 +167,11 @@ white-space: normal;
                 </div>
 
                 <div class="col-md-6">
-                  <section class="panel panel-featured-left panel-featured-primary">
+                  <section class="panel panel-featured-left panel-featured-quaternary">
                   <div class="panel-body">
                     <div class="widget-summary">
                       <div class="widget-summary-col widget-summary-col-icon">
-                        <div class="summary-icon bg-primary">
+                        <div class="summary-icon bg-quaternary">
                           <i class="fa fa-user"></i>
                         </div>
                       </div>
