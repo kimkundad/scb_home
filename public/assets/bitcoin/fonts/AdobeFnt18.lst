@@ -1,0 +1,147 @@
+%!Adobe-FontList 1.18
+%Locale:0x41e
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Sukhumvit-Bold
+FamilyName:Sukhumvit
+StyleName:Bold
+FullName:Sukhumvit Bold
+MenuName:Sukhumvit
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\Acer\Downloads\Seminer-web-27032017\Seminar-web-27032017\Font\SukhumvitBold.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:47504
+FileModTime:1260785014
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Sukhumvit Bold
+NameArray:0,Win,1,Sukhumvit
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Sukhumvit-Bold
+FamilyName:Sukhumvit
+StyleName:Bold
+FullName:Sukhumvit Bold
+MenuName:Sukhumvit
+StyleBits:2
+WritingScript:Roman
+OutlineFileName:C:\Users\Acer\Downloads\Seminer-web-27032017\Seminar-web-27032017\Font\SukhumvitBold.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:54364
+FileModTime:1260785574
+WeightClass:700
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,Sukhumvit Bold
+NameArray:0,Mac,4,Sukhumvit Bold
+NameArray:0,Win,1,Sukhumvit
+NameArray:0,Win,16,Sukhumvit
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Sukhumvit-Light
+FamilyName:Sukhumvit
+StyleName:Light
+FullName:Sukhumvit Light
+MenuName:Sukhumvit
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\Acer\Downloads\Seminer-web-27032017\Seminar-web-27032017\Font\SukhumvitLight.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:46752
+FileModTime:1260785020
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Sukhumvit Light
+NameArray:0,Win,1,Sukhumvit
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:SukhumvitLight
+FamilyName:Sukhumvit Light
+StyleName:Regular
+FullName:Sukhumvit Light
+MenuName:Sukhumvit Light
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\Acer\Downloads\Seminer-web-27032017\Seminar-web-27032017\Font\SukhumvitLight.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:54832
+FileModTime:1260785578
+WeightClass:300
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,Sukhumvit Light
+NameArray:0,Mac,4,Sukhumvit Light
+NameArray:0,Win,1,Sukhumvit Light
+NameArray:0,Win,16,Sukhumvit Light
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:Type1
+FontName:Sukhumvit
+FamilyName:Sukhumvit
+StyleName:Regular
+FullName:Sukhumvit
+MenuName:Sukhumvit
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\Acer\Downloads\Seminer-web-27032017\Seminar-web-27032017\Font\SukhumvitReg.otf
+DataFormat:sfntData
+UsesStandardEncoding:yes
+isCFF:yes
+hasSVG:no
+FileLength:46396
+FileModTime:1260785024
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,4,Sukhumvit
+NameArray:0,Win,1,Sukhumvit
+%EndFont
+
+%BeginFont
+Handler:DirectoryHandler
+FontType:TrueType
+FontName:Sukhumvit
+FamilyName:Sukhumvit
+StyleName:Regular
+FullName:Sukhumvit
+MenuName:Sukhumvit
+StyleBits:0
+WritingScript:Roman
+OutlineFileName:C:\Users\Acer\Downloads\Seminer-web-27032017\Seminar-web-27032017\Font\SukhumvitReg.ttf
+DataFormat:sfntData
+hasSVG:no
+FileLength:54996
+FileModTime:1260785870
+WeightClass:400
+WidthClass:5
+AngleClass:0
+NameArray:0,Mac,18,Sukhumvit
+NameArray:0,Mac,4,Sukhumvit
+NameArray:0,Win,1,Sukhumvit
+NameArray:0,Win,16,Sukhumvit
+%EndFont
+

@@ -1,0 +1,349 @@
+@font-face {
+	font-family: 'SukhumvitLight';
+	src: url('../fonts/SukhumvitLight.eot');
+	src: local('☺'), url('../fonts/SukhumvitLight.ttf') format('truetype'), url('../fonts/SukhumvitLight.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SukhumvitBold';
+	src: url('../fonts/SukhumvitBold.eot');
+	src: local('☺'), url('../fonts/SukhumvitBold.ttf') format('truetype'), url('../fonts/SukhumvitBold.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'SukhumvitReg';
+	src: url('../fonts/SukhumvitReg.eot');
+	src: local('☺'), url('../fonts/SukhumvitReg.ttf') format('truetype'), url('../fonts/SukhumvitReg.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body{
+    font-family: SukhumvitReg;
+}
+h1,h2{
+    font-family: SukhumvitBold;
+}
+/*frist page*/
+.btn-register-head{
+    background-color: #ffcd00;
+    border-radius: 20px;
+    padding: 5px 20px;
+    color:#3a2e5a;
+    font-size: 20px;
+    font-weight: bold;
+}
+.btn-register-head:hover{
+    text-decoration: none;
+}
+.btn-wallet{
+    background-color: #0af;
+    border-radius: 20px;
+    padding: 5px 20px;
+    color:#fff;
+    font-size: 18px;
+    font-weight: bold;
+}
+.btn-wallet:hover{
+    text-decoration: none;
+    color:#fff;
+}
+.header{
+    background: url('../images/header.jpg')no-repeat;
+    height:500px;
+    background-color: #f8961b;
+}
+.header-left{
+    margin-left: 190px;
+    color: #fff;
+    text-shadow: 0px 2px 0px rgba(156, 150, 150, 1);
+}
+.header-right{
+    color:#261d61;
+    font-size: 18px;
+}
+.header-right .title-head{
+    font-family: SukhumvitBold;
+    font-size: 35px;
+}
+.content-head{
+    font-size: 24px;
+}
+.navbar-custom{
+    background-color: #251e61;
+    border-color: #251e61;
+    border-radius: 0px;
+}
+.logo-topmenu{
+      padding:10px 0px;
+}
+.list-menu{
+    margin-top: 15px;
+}
+.list-menu li{
+    display: inline;
+    list-style: none;
+    font-size: 18px;
+    margin-left:110px;
+}
+.list-menu li>a{
+    color:#fff;
+}
+.list-menu li>a:hover{
+    text-decoration: none;
+}
+.special{
+    background-color: #e10000;
+    border: solid 1px #e10000;
+    padding: 2px 15px;
+    border-radius: 20px;
+}
+.icon-bar{
+    background-color: #000;
+}
+.head-sub{
+    background: url('../images/head-sub.jpg')no-repeat;
+    height: 434px;
+    margin-top: -20px;
+    color: #FFF;
+    font-family: SukhumvitLight;
+    font-size: 40px;
+    padding: 130px;
+}
+.member-list{
+    font-size:85px;
+    color:#ffce00;
+}
+.date{
+    float: right;
+    border: solid 1px #f8961b;
+    color: #f8961b;
+    border-radius: 10px;
+    padding: 5px 5px;
+}
+.sc-blue{
+    font-size: 18px;
+    font-family: SukhumvitLight;
+    background-color: #251e61;
+    height: auto;
+    color:#fff;
+    padding: 30px 20px;
+}
+.sc-blue .title-sub{
+    color: #ffce00;
+}
+.sc-blue a{
+    color:#fff;
+}
+.sc-blue a:hover{
+    color: #ffce00;
+}
+.sc-blue .row{
+    margin-top: 30px;
+}
+.sc-speaker{
+    background-color: #dfddde;
+    color:#261d61;
+    height: auto;
+    padding: 30px 20px;
+}
+.sc-white{
+    font-size: 18px;
+    background-color: #fff;
+    color:#261d61;
+    height: auto;
+    padding: 30px 20px;
+}
+.btn-register{
+   background-color: #251e61;
+   color: #fff;
+   padding: 10px 10px;
+   margin-top: 10px;
+   font-size: 20px;
+}
+.canbuy{
+    margin-top: 20px;
+}
+.title-vdo{
+    font-size: 55px;
+}
+.footer{
+    background-color: #373737;
+    padding: 20px 20px;
+}
+/*frist page*/
+
+/*register page*/
+.bg-register{
+    background: url('../images/head-register.png')no-repeat;
+    background-color: #251e61;
+    font-family: SukhumvitLight;
+    color:#fff;
+    font-size: 18px;
+}
+.re-title{
+    margin-top: 50px;
+}
+.re-content{
+    padding: 30px 0px;
+}
+.re-content h1, .re-content a{
+    color: #ffce00;
+}
+.re-title h1{
+    font-size: 75px;
+    text-shadow: 1px 3px 3px #666;
+}
+.input-register{
+    background-color:#171046;
+    color: #fff;
+    width: 100%;
+}
+
+/*announcement page*/
+#ann-page{
+    background-color: #251e61;
+    color: #fff;
+    font-size: 18px;
+    font-family: SukhumvitLight;
+}
+.head-subann{
+    background: url('../images/head-sub.jpg')no-repeat;
+    height: 434px;
+    margin-top: 20px;
+    color: #FFF;
+    font-size: 40px;
+    padding: 130px;
+}
+.img-circle img{
+    border-radius: 50%;
+}
+.sc-member-second{
+    background-color: #322874;
+    height: auto;
+    padding: 30px 0px;
+}
+
+.sc-member-second .row{
+    margin-top:30px;
+}
+@media (max-width: 480px){
+    .header-left .img-topmenu{
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+@media (max-width: 768px){
+     .navbar-custom{
+        background-color: #251e61;
+        border-color: #251e61;
+        border-radius: 0px;
+        width: 100%;
+        height: auto;
+        position: fixed;
+        opacity: 0.7;
+        z-index: 1;
+        top: 0;
+        left: 0;
+     }
+     .navbar-header{
+         background-color: #000;
+    }
+    .navbar-collapse{
+        background-color: #000;
+    }
+     .logo-topmenu{
+        width: 250px;
+        margin-top: 5px;
+    }
+     .list-menu li{
+        margin-left:0px;
+        display: block;
+    }
+    .head-sub{
+        background: none;
+        background-color: #261d61;
+        font-size: 18px;
+        height: auto;
+        padding: 25px;
+    }
+    .head-sub{
+        background: none;
+        background-color: #261d61;
+        font-size: 18px;
+        height: auto;
+        padding: 25px;
+    }
+    .member-list{
+        font-size:20px;
+        color:#ffce00;
+    }
+    .title-sub{
+        margin-top: 30px;
+    }
+    .sc-blue .row{
+        text-align: center;
+    }
+    .sc-blue img{
+        margin-top: 30px;
+    }
+    .sc-white img{
+        margin-top: 30px;
+    }
+    .title-vdo{
+        font-size: 20px;
+    }
+    .title-vdo br{
+        display: none;
+    }
+    .date{
+        float: left;
+    }
+    /*register page*/
+    .bg-register{
+        background: none;
+        background-color: #251e61;
+    }
+
+    /*announcement page*/
+      .head-subann{
+        background: none;
+        background-color: #261d61;
+        font-size: 18px;
+        height: auto;
+        padding: 25px;
+    }
+    .sc-member-second .row{
+        margin-top:30px;
+        text-align: center;
+    }
+    iframe{
+        width: 100%;
+        height: auto;
+    }
+
+}
+
+@media (max-width: 992px){
+    .header-left{
+        margin-left: 0px;
+    }
+    .header{
+        background: none;
+        background-color: #f8961b;
+        height: auto;
+    }
+    .sc-white img{
+        margin-top: 30px;
+    }
+}
+@media (max-width: 1199px){
+    .header-left{
+        margin-left: 0px;
+    }
+}
+@media (min-width: 1280px){}

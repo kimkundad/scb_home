@@ -1,0 +1,251 @@
+.panel {
+    margin-bottom: 12px;
+    background-color: #ffffff;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+.panel {
+    background: transparent;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+}
+.panel-featured-primary {
+    border-color: #0088cc;
+}
+
+.panel-featured-secondary {
+    border-color: #e36159;
+}
+
+.panel-featured-tertiary {
+    border-color: #2baab1;
+}
+
+
+.panel-featured-left-primary{
+    border-left: 3px solid #0088cc;
+}
+
+
+
+.panel-featured-left-secondary{
+    border-left: 3px solid #e36159;
+}
+
+.panel-featured-left-tertiary{
+    border-left: 3px solid #2baab1;
+}
+
+.panel-featured-left-quartenary{
+    border-left: 3px solid #734ba9;
+}
+
+.panel-featured-quartenary {
+    border-color: #734ba9;
+}
+
+.bg-quartenary {
+    background: #734ba9;
+    color: white;
+}
+
+.bg-secondary {
+    background: #e36159;
+    color: white;
+}
+
+.bg-tertiary {
+    background: #2baab1;
+    color: white;
+}
+
+
+
+.panel-body {
+    background: #fdfdfd;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    border-radius: 5px;
+}
+.panel-body {
+    padding: 8px 15px 8px 10px;
+}
+.widget-summary.widget-summary-xs {
+    padding: 0;
+}
+.widget-summary {
+    display: table;
+    width: 100%;
+}
+
+
+.widget-summary .widget-summary-col {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+}
+
+.widget-summary .widget-summary-col.widget-summary-col-icon {
+    width: 1%;
+}
+
+
+.widget-summary .summary-icon {
+    margin-right: 15px;
+    font-size: 42px;
+    font-size: 4.2rem;
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+    text-align: center;
+    color: #fff;
+    -webkit-border-radius: 55px;
+    border-radius: 55px;
+}
+
+.widget-summary.widget-summary-xs .summary-icon {
+    width: 30px;
+    height: 30px;
+    line-height: 33px;
+    font-size: 18px;
+    font-size: 1.8rem;
+}
+.bg-primary {
+    background: #0088cc;
+}
+.widget-summary .widget-summary-col {
+    display: table-cell;
+    vertical-align: top;
+    width: 100%;
+}
+.widget-summary.widget-summary-xs .summary {
+    min-height: 0;
+}
+.widget-summary .summary .title {
+    margin: 0;
+    font-size: 16px;
+    font-size: 1.6rem;
+    line-height: 22px;
+    line-height: 2.2rem;
+    color: #333333;
+    font-weight: 500;
+}
+.widget-summary.widget-summary-xs .summary .title {
+    font-size: 12px;
+    font-size: 1.2rem;
+    line-height: 32px;
+}
+
+.modal-wrapper {
+    position: relative;
+    padding: 25px 0;
+}
+.modal-icon {
+    float: left;
+    width: 20%;
+    text-align: center;
+}
+.modal-icon .fa {
+    font-size: 52px;
+    position: relative;
+    top: -10px;
+    color: #0088cc;
+}
+.modal-text {
+    padding: 0 5px;
+}
+
+#kimkundad .ap-user-avatar {
+    margin-right: 10px;
+    position: relative;
+}
+
+
+#kimkundad .ap-user-info>* {
+    display: table-cell;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+#kimkundad .ap-user-avatar img {
+    display: block;
+    box-shadow: none;
+}
+#kimkundad .ap-user-info>* {
+    display: table-cell;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+#kimkundad .ap-user-name {
+    color: #333;
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+#kimkundad .ap-user-info>* {
+    display: table-cell;
+    padding-right: 15px;
+    vertical-align: middle;
+}
+
+#kimkundad .ap-user-navigation {
+    float: left;
+    width: 200px;
+}
+#kimkundad #ap-user-menu {
+    border-right: 2px solid #f1f1f1;
+    list-style: outside none none;
+    margin: 0 0 20px;
+    padding: 0 15px 0 0;
+}
+@media (min-width: 767px){
+#kimkundad #ap-user-menu {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+}
+
+#kimkundad #ap-user-menu>li {
+    border-bottom: 1px solid #eee;
+    margin: 0;
+    padding: 0;
+}
+
+#kimkundad #ap-user-menu>li>a {
+    color: #555;
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 15px 15px;
+}
+#kimkundad #ap-user-menu>li>a i {
+    border-right: 1px solid #eee;
+    display: block;
+    float: left;
+    font-size: 17px;
+    height: 49px;
+    line-height: 51px;
+    margin-left: -15px;
+    margin-right: 10px;
+    margin-top: -16px;
+    text-align: center;
+    width: 49px;
+}
+#kimkundad .ap-user-info {
+    margin-bottom: 20px;
+    display: table;
+}
+
+#kimkundad .ap-user-lr {
+    margin-left: 210px !important;
+}
+#kimkundad .ap-user-page-title {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 15px;
+    margin-top: 0;
+    padding-bottom: 10px;
+}
