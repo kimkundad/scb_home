@@ -175,6 +175,7 @@ class MbitcoinController extends Controller
        $package->code_user = $code_to_user;
        $package->confirmed = 1;
        $package->company = $company;
+       $package->char_user = 'NEW';
        $package->name = $name;
        $package->phone = $phone;
        $package->groups = $groups;
@@ -213,7 +214,7 @@ class MbitcoinController extends Controller
      $arr['name'] = $get_data->name;
      $arr['phone'] = $get_data->phone;
      $arr['company'] = $get_data->company;
-     $arr['char_user'] = "NEW";
+     $arr['income_time'] = $get_data->income_time;
      $arr['groups'] = $get_data->groups;
 
      $arr['success'] = true;
@@ -256,6 +257,10 @@ class MbitcoinController extends Controller
     public function update_user(Request $request)
     {
 
+      $name_user = $request['name_user'];
+      $phone = $request['phone'];
+      $company = $request['company'];
+
 
       $id = $request['id_user'];
       $upobj = DB::table('members')
@@ -265,6 +270,9 @@ class MbitcoinController extends Controller
           ->where('id', $id)
           ->update(array(
             'confirmed' => $request['status_user'],
+            'company' => $company,
+            'name' => $name_user,
+            'phone' => $phone,
             'admin_id' => $request['admin_id']
           ));
 
@@ -300,7 +308,7 @@ class MbitcoinController extends Controller
           $arr['name'] = $get_data->name;
           $arr['phone'] = $get_data->phone;
           $arr['company'] = $get_data->company;
-          $arr['char_user'] = $get_data->char_user;
+          $arr['income_time'] = $get_data->income_time;
           $arr['groups'] = $get_data->groups;
           $arr['success'] = true;
 

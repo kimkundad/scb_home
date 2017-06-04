@@ -231,7 +231,7 @@ white-space: normal;
                        <th>เบอร์โทร</th>
                        <th>ชื่อบริษัท</th>
                        <th>กลุ่ม</th>
-                       <th>Char</th>
+                       <th>เวลา</th>
 
 
 
@@ -252,7 +252,7 @@ white-space: normal;
                         <td>{{$u->company}}</td>
 
                         <td>{{$u->groups}}</td>
-                        <td>{{$u->char_user}}</td>
+                        <td>{{$u->income_time}}</td>
 
                        </tr>
 
@@ -302,9 +302,9 @@ socket.on( 'new_count_message', function( data ) {
 
   socket.on( 'new_message', function( data ) {
 
-      $( "#message-tbody" ).prepend('<tr><td>ID: '+data.code_user+'</td><td>'+data.name+'</td><td>'+data.phone+'</td><td>'+data.company+'</td><td>'+data.char_user+'</td><td>'+data.groups+'</td></tr>');
+      $( "#message-tbody" ).prepend('<tr><td>ID: '+data.code_user+'</td><td>'+data.name+'</td><td>'+data.phone+'</td><td>'+data.company+'</td><td>'+data.groups+'</td><td>'+data.income_time+'</td></tr>');
       $('#notif_audio')[0].play();
-
+      console.log(data.income_time);
       $.ajax({
           url: '{{url('api/get_chart')}}', // getchart.php
           dataType: 'JSON',

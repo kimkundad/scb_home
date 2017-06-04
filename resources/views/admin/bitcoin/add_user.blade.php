@@ -329,7 +329,7 @@ $('.tooltip_flip.tooltip-effect-1').click(function(e){
             var formData =  $form.serializeArray();
 
 
-  
+
     var a=$form.find("#name").val();
     var b=$form.find("#phone").val();
     var c=$form.find("#groups").val();
@@ -383,7 +383,7 @@ $('.tooltip_flip.tooltip-effect-1').click(function(e){
               name: data.name,
               phone: data.phone,
               company: data.company,
-              char_user: data.char_user,
+              income_time: data.income_time,
               groups: data.groups
             });
           //  alert(data.phone_bit);

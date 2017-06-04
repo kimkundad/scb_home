@@ -31,7 +31,7 @@ io.on('connection', function (socket) {
       name: data.name,
       phone: data.phone,
       company: data.company,
-      char_user: data.char_user,
+      income_time: data.income_time,
       groups: data.groups
     });
   });

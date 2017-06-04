@@ -201,49 +201,38 @@ white-space: normal;
 										<section class="panel">
                       <form id="cutproduct1">
 											<header class="panel-heading">
-												<h2 class="panel-title">แก้ไข {{$u->name}}?</h2>
+												<h2 class="panel-title">ลงทะเบียน {{$u->name}}?</h2>
 											</header>
 											<div class="panel-body">
 												<div class="modal-wrapper">
                           <div class="modal-text">
 
+
                             <div class="form-group">
-                              <label for="inputPassword3" class=" control-label">เบอร์โทร : {{$u->phone}}</label>
+                              <label for="inputPassword3" class=" control-label">ชื่อ-นามสกุล</label>
+                              <input type="text" class="form-control" id="name_user" value="{{$u->name}}" placeholder="Mr.kim kundad">
+                           </div>
+
+                            <div class="form-group">
+                              <label for="inputPassword3" class=" control-label">เบอร์โทร</label>
+                              <input type="text" class="form-control" id="phone" value="{{$u->phone}}" placeholder="081-12xxxxxx">
                            </div>
 
                            <div class="form-group">
-                             <label for="inputPassword3" class=" control-label">ชื่อบริษัท : {{$u->company}}</label>
+                             <label for="inputPassword3" class=" control-label">ชื่อบริษัท</label>
+                             <input type="text" class="form-control" id="company" value="{{$u->company}}" placeholder="บริษัท สร้างบ้านสวย...">
                           </div>
 
-                          <div class="form-group">
-                            <label for="inputPassword3" class=" control-label">กลุ่ม : {{ $u->groups }}</label>
-
-                         </div>
 
 
 
 
-                               <div class="form-group">
-                                 <label for="inputPassword3" class=" control-label">สิทธิการร่วมกิจกรรม</label>
-                               <select class="form-control" id="status_user" name="status_user">
-                                <option value="">--เลือกสิทธิการเข้าร่วม--</option>
-
-
-                                <option value="0" @if( $u->confirmed == 0)
-                                                                  selected='selected'
-                                                                  @endif >ยังไม่มา</option>
-                                <option value="1" @if( $u->confirmed == 1)
-                                                                  selected='selected'
-                                                                  @endif >ได้เข้าร่วมแล้ว</option>
-
-
-                              </select>
-                              </div>
                               <br>
                               <div class="form-group">
-                                <label for="inputPassword3" class=" control-label">Admin id : {{ Auth::user()->id }}</label>
+                                <label for="inputPassword3" class=" control-label">Admin Number : {{ Auth::user()->id }}</label>
                                 <input type="hidden" id="admin_id" class="form-control" name="admin_id" value="{{ Auth::user()->id }}" >
                                 <input type="hidden" id="id_user" class="form-control" name="id"   value="{{ $u->id }}" >
+                                <input type="hidden" id="status_user" class="form-control" name="status_user"   value="1" >
                              </div>
 													</div>
 												</div>
@@ -306,6 +295,9 @@ $('.tooltip_flip.tooltip-effect-1').click(function(e){
           status_user : $form.find("#status_user").val(),
           admin_id : $form.find("#admin_id").val(),
           id_user : $form.find("#id_user").val(),
+          name_user : $form.find("#name_user").val(),
+          phone : $form.find("#phone").val(),
+          company : $form.find("#company").val(),
           _token : '{{ csrf_token() }}'
         };
 
@@ -340,7 +332,7 @@ $('.tooltip_flip.tooltip-effect-1').click(function(e){
               name: data.name,
               phone: data.phone,
               company: data.company,
-              char_user: data.char_user,
+              income_time: data.income_time,
               groups: data.groups
             });
           //  alert(data.phone_bit);
