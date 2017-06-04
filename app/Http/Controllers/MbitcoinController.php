@@ -179,7 +179,7 @@ class MbitcoinController extends Controller
        $package->name = $name;
        $package->phone = $phone;
        $package->groups = $groups;
-       $package->income_time = date("Y-m-d H:i:s");
+       $package->income_time = date("Y-m-d H:i:s", strtotime('+10 hour'));
        $package->save();
 
        $get_all_count = DB::table('members')
