@@ -145,7 +145,7 @@ white-space: normal;
                      <div class="form-group">
                        <label class="col-md-3 control-label" for="profileFirstName">บริษัท*</label>
                        <div class="col-md-8">
-                         <input type="text" class="form-control" name="company" value="{{ old('company') }}" id="company">
+                         <input type="text" class="form-control" name="company" value="{{$company }}" id="company">
                        </div>
                      </div>
 

@@ -32,7 +32,8 @@ io.on('connection', function (socket) {
       phone: data.phone,
       company: data.company,
       income_time: data.income_time,
-      groups: data.groups
+      groups: data.groups,
+      admin_id: data.admin_id
     });
   });
 

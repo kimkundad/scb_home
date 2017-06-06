@@ -45,7 +45,15 @@ html.no-overflowscrolling .nano > .nano-pane > .nano-slider {
                   <li {{ (Request::is('admin/add_user*') ? 'class=nav-expanded' : '') }}  {{ (Request::is('admin/add_user*') ? 'class=nav-expanded' : '') }}>
 										<a href="{{url('admin/add_user')}}" >
 											<i class="fa fa-user-plus " aria-hidden="true"></i>
-											<span>ผู้ลงทะเบียน</span>
+											<span>เพิ่มผู้ลงทะเบียนใหม่</span>
+										</a>
+									</li>
+
+
+                  <li {{ (Request::is('admin/print*') ? 'class=nav-expanded' : '') }}  {{ (Request::is('admin/print*') ? 'class=nav-expanded' : '') }}>
+										<a href="{{url('admin/print')}}" >
+											<i class="fa fa-print" aria-hidden="true"></i>
+											<span>พิมพ์คูปอง</span>
 										</a>
 									</li>
 

@@ -26,9 +26,7 @@
                         <div class="dropdown-menu">
                             <ul class="list-unstyled">
                                 <li class="divider"></li>
-                                <li>
-                                    <a role="menuitem" tabindex="-1" href="{{url('admin/profile/')}}" ><i class="fa fa-user"></i> ข้อมูลส่วนตัว</a>
-                                </li>
+                              
                                 <li>
                                     <a role="menuitem" tabindex="-1" href="{{url('logout')}}" ><i class="fa fa-power-off"></i> ออกจากระบบ</a>
                                 </li>

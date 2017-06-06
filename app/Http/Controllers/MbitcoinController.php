@@ -52,7 +52,92 @@ class MbitcoinController extends Controller
 
 
 
+     public function add_user(){
 
+      $data['header'] = 'รายชื่อในระบบ';
+       return view('admin.bitcoin.add_user', $data);
+     }
+
+     public function coupon(){
+
+       $objs = DB::table('members')
+                 ->where('members.groups','distributor')
+                 ->where('members.confirmed',1)
+                  ->where('members.coupon',0)
+                 ->count();
+
+       $data['objs'] = $objs;
+
+
+       $objs_other = DB::table('members')
+                ->where('members.groups','other')
+                ->where('members.confirmed',1)
+                 ->where('members.coupon',0)
+                 ->count();
+
+       $data['objs_other'] = $objs_other;
+
+
+       $objs_zero = DB::table('members')
+                ->where('members.groups','contractor & supplier')
+                ->where('members.confirmed',1)
+                 ->where('members.coupon',0)
+                 ->count();
+
+       $data['objs_zero'] = $objs_zero;
+
+
+       $data['header'] = 'พิมพ์คูปอง';
+        return view('admin.bitcoin.coupon', $data);
+     }
+
+
+
+     public function add_user2(Request $request){
+      $company = $request['company'];
+      $data['company'] = $company;
+       return view('admin.bitcoin.add_user2', $data);
+     }
+
+
+
+
+     public function print_coupon(Request $request){
+
+       $name_group = $request['name_group'];
+       $num_print = $request['num_print'];
+
+       if($name_group == 0){
+         $groups = 'other';
+       }elseif($name_group == 1){
+         $groups = 'distributor';
+       }else{
+         $groups = 'contractor & supplier';
+       }
+
+       $objs = DB::table('members')
+                 ->select(
+                 'members.*'
+                 )
+                 ->where('members.groups',$groups)
+                 ->where('members.confirmed',1)
+                  ->where('members.coupon',0)
+                 ->limit($num_print)
+                 ->get();
+
+      foreach ($objs as $obj) {
+
+        $package = member::find($obj->id);
+        $package->coupon = 1;
+        $package->save();
+
+      }
+
+              // dd($objs);
+          $data['objs'] = $objs;
+       return view('admin.bitcoin.print_out', $data);
+
+     }
 
 
 
@@ -217,6 +302,7 @@ class MbitcoinController extends Controller
      $arr['company'] = $get_data->company;
      $arr['income_time'] = date('Y-m-d H:i:s', strtotime('+7 hour'));
      $arr['groups'] = $get_data->groups;
+     $arr['admin_id'] = Auth::user()->id;
 
      $arr['success'] = true;
         $arr['data_message'] = 'เพิ่มคุณ '.$arr['name'].' รายชื่อสำเร็จ';
@@ -312,6 +398,7 @@ class MbitcoinController extends Controller
           $arr['company'] = $get_data->company;
           $arr['income_time'] = date('Y-m-d H:i:s', strtotime('+7 hour'));
           $arr['groups'] = $get_data->groups;
+          $arr['admin_id'] = Auth::user()->id;
           $arr['success'] = true;
 
         //  dd($arr);
@@ -359,8 +446,20 @@ $count_user = member::where('members.confirmed', 1)->count();
                       ->orderBy('members.id','ASC')
                       ->paginate(15);
 
+                      $search_lock = DB::table('members')
+                                ->select(
+                                'members.*'
+                                )
+                                ->where('name', 'like', "%$search%")
+                                    ->orWhere('phone', 'like', "%$search%")
+                                    ->orWhere('groups', 'like', "%$search%")
+                                    ->orWhere('company', 'like', "%$search%")
+                                ->orderBy('members.id','ASC')
+                                ->first();
 
+        //dd($search_lock);
         //dd($objs);
+        $data['search_lock'] = $search_lock;
         $data['search'] = $search;
         $data['objs'] = $objs;
         $data['count_user'] = $count_user;

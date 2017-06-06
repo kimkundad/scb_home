@@ -65,7 +65,7 @@ white-space: normal;
 <audio id="notif_audio"><source src="{!! asset('sounds/notify.ogg') !!}" type="audio/ogg"><source src="{!! asset('sounds/notify.mp3') !!}" type="audio/mpeg"><source src="{!! asset('sounds/notify.wav') !!}" type="audio/wav"></audio>
 				<section role="main" class="content-body">
 
-					
+
 
 
 					<!-- start: page -->
@@ -79,55 +79,14 @@ white-space: normal;
 							<div class="row">
 
 
-                <div class="col-md-6">
-  								<section class="panel">
-
-  									<div class="panel-body">
-
-  										<!-- Flot: Pie -->
-  										<div class="chart chart-md" id="flotPie"></div>
-  						<!--				<script type="text/javascript">
-
-  											var flotPieData = [{
-  												label: "Series 1",
-  												data: [
-  													[1, 40]
-  												],
-  												color: '#0088cc'
-  											}, {
-  												label: "Series 2",
-  												data: [
-  													[1, 30]
-  												],
-  												color: '#2baab1'
-  											}, {
-  												label: "Series 3",
-  												data: [
-  													[1, 15]
-  												],
-  												color: '#734ba9'
-  											}, {
-  												label: "Series 4",
-  												data: [
-  													[1, 15]
-  												],
-  												color: '#E36159'
-  											}];
-
-
-
-  										</script> -->
-
-  									</div>
-  								</section>
-  							</div>
 
 
 
 
 
 
-                <div class="col-md-6">
+
+                <div class="col-md-3">
                   <section class="panel panel-featured-left panel-featured-secondary">
                   <div class="panel-body">
                     <div class="widget-summary">
@@ -138,9 +97,9 @@ white-space: normal;
                       </div>
                       <div class="widget-summary-col">
                         <div class="summary">
-                          <h4 class="title" style="font-size: 18px; margin-top: 10px;">จำนวนผู้มาร่วมงาน ณ เวลานี้</h4>
+                          <h4 class="title" style="font-size: 16px; margin-top: 10px;">Distributor coupon</h4>
                           <div class="info">
-                            <strong class="amount" id="new_count_message">{{$count_user}}</strong>
+                            <strong class="amount" id="new_count_message">{{$objs}}</strong>
                           </div>
                         </div>
 
@@ -150,20 +109,22 @@ white-space: normal;
                 </section>
                 </div>
 
-                <div class="col-md-6">
-                  <section class="panel panel-featured-left panel-featured-quaternary">
+
+
+                <div class="col-md-3">
+                  <section class="panel panel-featured-left panel-featured-success">
                   <div class="panel-body">
                     <div class="widget-summary">
                       <div class="widget-summary-col widget-summary-col-icon">
-                        <div class="summary-icon bg-quaternary">
+                        <div class="summary-icon bg-success">
                           <i class="fa fa-user"></i>
                         </div>
                       </div>
                       <div class="widget-summary-col">
                         <div class="summary">
-                          <h4 class="title" style="font-size: 18px; margin-top: 10px;">จำนวนผู้ร่วมงานทั้งหมด</h4>
+                          <h4 class="title" style="font-size: 18px; margin-top: 10px;">C&S coupon</h4>
                           <div class="info">
-                            <strong class="amount" id="new_count_all_message">{{$count_user_all}}</strong>
+                            <strong class="amount" id="new_count_message">{{$objs_zero}}</strong>
                           </div>
                         </div>
 
@@ -173,95 +134,72 @@ white-space: normal;
                 </section>
                 </div>
 
-							<div class="col-xs-12">
-
-						<section class="panel">
-							<header class="panel-heading">
-								<div class="panel-actions">
-									<a href="#"  class="panel-action panel-action-toggle" data-panel-toggle></a>
-								</div>
-
-								<h2 class="panel-title">Property Next 4.0 The new s curve  ( ผู้ลงทะเบียนเข้ามาแล้ว : <span class="text-danger" id="new_count_message2">{{$count_user}}</span> )</h2>
-							</header>
-							 <div class="panel-body">
 
 
-                 <div class="row">
+                <div class="col-md-3">
+                  <section class="panel panel-featured-left panel-featured-primary">
+                  <div class="panel-body">
+                    <div class="widget-summary">
+                      <div class="widget-summary-col widget-summary-col-icon">
+                        <div class="summary-icon bg-primary">
+                          <i class="fa fa-user"></i>
+                        </div>
+                      </div>
+                      <div class="widget-summary-col">
+                        <div class="summary">
+                          <h4 class="title" style="font-size: 18px; margin-top: 10px;">Other coupon</h4>
+                          <div class="info">
+                            <strong class="amount" id="new_count_message">{{$objs_other}}</strong>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                </div>
 
 
-                   <div class="col-md-8 pull-right">
-                     <br>
-                     <div class="form-group ">
-                       <label class="col-md-4 control-label"></label>
-                       <div class="col-md-8">
-                         <form class="form-horizontal" action="{{url('admin/searchbitcoin')}}" method="GET" enctype="multipart/form-data">
-                           {{ csrf_field() }}
-                         <div class="input-group input-search">
-                           <input type="text" class="form-control" name="q" id="q" placeholder="Search..." required>
-                           <span class="input-group-btn">
-                             <button class="btn btn-default" type="submit"><i class="fa fa-search"></i></button>
-                           </span>
-                         </div>
-                       </form>
-                       </div>
-                     </div>
-                   </div>
+                <div class="col-md-6">
 
-                 </div>
+  						<section class="panel">
+
+  							 <div class="panel-body">
 
 
-<br>
-
-                 <div class="table-responsive">
-
-                <table class="table table-bordered table-striped mb-none ">
-                   <thead>
-                     <tr>
-                       <th>#</th>
-                       <th>ชื่อ-นามสกุล</th>
-                       <th>เบอร์โทร</th>
-                       <th>ชื่อบริษัท</th>
-                       <th>กลุ่ม</th>
-                       <th>เวลา</th>
-
-
-
-                     </tr>
-                   </thead>
-                   <tbody id="message-tbody">
-                     @if($objs)
-                 @foreach($objs as $u)
-                      <tr>
-                        <td>ID: {{$u->code_user}}</td>
-
-                        <td>
-
-                          <a>{{$u->name}}</a>
-
-                        </td>
-                        <td>{{$u->phone}}</td>
-                        <td>{{$u->company}}</td>
-
-                        <td>{{$u->groups}}</td>
-                        <td>{{$u->income_time}}</td>
-
-                       </tr>
+                   <form  action="{{url('admin/print_coupon/')}}" method="post" >
+                          <input type="hidden" name="_method" value="POST">
+                           <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                           <div class="form-group">
+                             <label for="exampleInputEmail1">ใส่ตัวเลข ที่ต้องการจะพิมพ์คูปอง</label>
+                           <input type="number" class="form-control" name="num_print" required>
+                           </div>
+                           <div class="form-group">
+                           <select class="form-control" class="form-control" name="name_group" required>
+                             <option value="">--เลือกกลุ่มที่จะพิมพ์--</option>
+                             <option value="0">other</option>
+                            <option value="1">distributor</option>
+                            <option value="2">contractor & supplier</option>
+                          </select>
+                          </div>
+                           <br>
+                          <button type="submit" class="btn btn-default "><i class="fa fa-user-plus"></i> พิมพ์คูปอง</button>
+                  </form>
 
 
 
-                        @endforeach
-               @endif
 
-                   </tbody>
-                 </table>
-               </div>
+                </div>
+  						</section>
+
+  							</div>
 
 
-               <div class="pagination"> {{ $objs->links() }} </div>
-              </div>
-						</section>
 
-							</div>
+
+
+
+
 						</div>
 
 </section>

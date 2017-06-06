@@ -77,23 +77,7 @@ white-space: normal;
 
 				<section role="main" class="content-body">
 
-					<header class="page-header">
-						<h2>Property Next 4.0 The new s curve</h2>
 
-						<div class="right-wrapper pull-right">
-							<ol class="breadcrumbs">
-								<li>
-									<a href="dashboard.html">
-										<i class="fa fa-home"></i>
-									</a>
-								</li>
-
-								<li><span>Check User</span></li>
-							</ol>
-
-							<a class="sidebar-right-toggle" data-open="sidebar-right" ><i class="fa fa-chevron-left"></i></a>
-						</div>
-					</header>
 
 
 					<!-- start: page -->
@@ -124,6 +108,20 @@ white-space: normal;
 
 
                  <div class="row">
+
+                   <div class="col-md-4">
+                     <br>
+                     @if(isset($search_lock))
+                     <form  action="{{url('admin/add_user/2/')}}" method="post" >
+                            <input type="hidden" name="_method" value="POST">
+                             <input type="hidden" name="_token" value="{{ csrf_token() }}">
+                             <input type="hidden" name="company" value="{{$search_lock->company}}">
+                            <button type="submit" class="btn btn-default "><i class="fa fa-user-plus"></i> เพิ่ม <span class="text-success">{{$search_lock->company}}</span></button>
+                          </form>
+                    @else
+                     <a class="btn btn-default" href="{{url('admin/add_user')}}" role="button"><i class="fa fa-user-plus"></i> เพิ่มผู้เข้าร่วมงานใหม่</a>
+                     @endif
+                   </div>
 
 
                    <div class="col-md-8 pull-right">
@@ -168,7 +166,13 @@ white-space: normal;
                   <tbody>
                     @if($objs)
                 @foreach($objs as $u)
-                      <td>{{$u->code_user}}</td>
+                <td>@if($u->confirmed == 1)
+                <a style="float:left; margin-right:3px; "
+                class="btn btn-success btn-xs " role="button"><i class="fa fa-user"></i> </a>
+                @else
+                <a style="float:left; margin-right:3px; "
+                class="btn btn-danger btn-xs " role="button"><i class="fa fa-user"></i> </a>
+                @endif {{$u->code_user}}</td>
 
                       <td>
 
@@ -184,13 +188,6 @@ white-space: normal;
 
                       <td>
 
-                        @if($u->confirmed == 1)
-                        <a style="float:left; margin-right:3px; margin-top:5px;"
-                        class="btn btn-success btn-xs " role="button"><i class="fa fa-user"></i> </a>
-                        @else
-                        <a style="float:left; margin-right:3px; margin-top:5px;"
-                        class="btn btn-danger btn-xs " role="button"><i class="fa fa-user"></i> </a>
-                        @endif
 
 
 
@@ -338,7 +335,8 @@ $('.tooltip_flip.tooltip-effect-1').click(function(e){
               phone: data.phone,
               company: data.company,
               income_time: data.income_time,
-              groups: data.groups
+              groups: data.groups,
+              admin_id: data.admin_id
             });
           //  alert(data.phone_bit);
           //  window.location.reload();

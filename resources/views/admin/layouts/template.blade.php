@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="fixed sidebar-left-xs">
+<html class="fixed sidebar-left-xs sidebar-left-collapsed">
     <head>
 
         <!-- Basic -->
@@ -23,7 +23,7 @@
 
 </head>
 
-<body class="loading-overlay-showing" data-loading-overlay>
+<body class="loading-overlay-showing " data-loading-overlay>
         <span class="loading-overlay dark">
             <span class="loader white"></span>
         </span>
@@ -49,7 +49,7 @@
             <!-- end: header -->
 
 
-<div class="inner-wrapper">
+<div class="inner-wrapper" style="padding-top: 50px;">
 @include('admin.layouts.inc-left-slidebar')
 
 

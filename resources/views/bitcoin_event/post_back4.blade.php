@@ -123,13 +123,14 @@ outline: 0 none;
 
 <audio id="notif_audio"><source src="{!! asset('sounds/notify.ogg') !!}" type="audio/ogg"><source src="{!! asset('sounds/notify.mp3') !!}" type="audio/mpeg"><source src="{!! asset('sounds/notify.wav') !!}" type="audio/wav"></audio>
 
-  <header style="background-color: #251e61; background: url({{url('assets/bitcoin/images/seminarwebsite-home.jpg')}});
+  <header style="background-color: #251e61; background: url({{url('assets/image/SCBscreenprop.jpg')}});
     border-color: #251e61;
     border-radius: 0px; border-radius: 0px;
-    min-height: 980px;
+    min-height: 1024px;
     background-size: 100%;
     background-repeat: no-repeat;">
 
+    <div id="text-show"></div>
 
     </header>
 
@@ -221,6 +222,7 @@ outline: 0 none;
 
     <script>
 
+    $( "#text-show" ).prepend('<h1 class="text-center" style="font-size:100px;  padding-top: 350px; margin-top: 0px; margin-bottom: 0px; text-align: center;">ยินดีต้อนรับ</h1>');
 
     var socket = io.connect( 'http://'+window.location.hostname+':3000' );
 
@@ -233,21 +235,45 @@ outline: 0 none;
 
       socket.on( 'new_message', function( data ) {
 
-          $( "#message-tbody" ).prepend('<div class="col-md-2" style="margin-top: 30px;"><div class="col-md-4" style=" padding-right: 5px; padding-left: 5px; "><a href="https://www.facebook.com/'+data.provider_user_id+'" target="_blank"><img src="//graph.facebook.com/'+data.provider_user_id+'/picture?width=300&height=300" class="img-circle img-responsive center-block" ></a></div><div class="col-md-8" style="margin-top: 5px; padding-right: 5px; padding-left: 5px;"><a href="https://www.facebook.com/'+data.provider_user_id+'" target="_blank" style="text-decoration: none;"><p style="margin: 0 0 0px; font-size: 15px;">'+data.name+'</p><p style="margin: 0 0 0px; line-height: 1.2em;">'+data.nickname_bit+'</p></a></div></div>');
-          $('#notif_audio')[0].play();
+
+
+        $( "#message-tbody" ).prepend('<tr><td>ID: '+data.code_user+'</td><td>'+data.name+'</td><td>'+data.phone+'</td><td>'+data.company+'</td><td>'+data.groups+'</td><td>'+data.income_time+'</td></tr>');
+        $('#notif_audio')[0].play();
 
           if(data.admin_id == 4){
-            swal({
-              title: data.name,
-              text: "ลงทะเบียนหน้างานเสร็จเรียบร้อย",
-              type: 'success',
-              timer: 6000
-            });
+              $("#text-show").html("");
+              $( "#text-show" ).prepend('<h1 class="text-center" style="font-size:75px;  padding-top: 350px; margin-top: 0px; margin-bottom: 0px; text-align: center;">'+data.name+'</h1><h4 style="font-size:40px; text-align: center; margin-top: 0px; margin-bottom: 0px;">'+data.company+'</h4>');
+
+            var delayMillis = 1600;
+            setTimeout(function() {
+              $("#text-show").html("");
+              $( "#text-show" ).prepend('<h1 class="text-center" style="font-size:100px;  padding-top: 350px; margin-top: 0px; margin-bottom: 0px; text-align: center;">ลงทะเบียนเรียบร้อย</h1>');
+
+              var delayMilli = 1200;
+
+                setTimeout(function() {
+                  $("#text-show").html("");
+                  $( "#text-show" ).prepend('<h1 class="text-center" style="font-size:100px;  padding-top: 350px; margin-top: 0px; margin-bottom: 0px; text-align: center;">ยินดีต้อนรับ</h1>');
+                }, delayMilli);
+
+
+            }, delayMillis);
+
+
+
           }
 
 
 
       });
+
+    /*  var delayMillis = 500;
+
+      setTimeout(function() {
+        $("#text-show").html("");
+        $( "#text-show" ).prepend('<h1 class="text-center" style="font-size:100px;  right: 400px; top: 300px; position: absolute;">ยินดีต้อนรับ</h1>');
+      }, delayMillis); */
+
     </script>
 
   </body>

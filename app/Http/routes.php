@@ -36,8 +36,20 @@ Route::group(['middleware' => 'auth'], function () {
     Route::post('admin/store_user','MbitcoinController@store_user');
 
 
-    Route::get('admin/add_user/', function () {
-        return view('admin.bitcoin.add_user');
-    });
+    Route::get('admin/add_user','MbitcoinController@add_user');
+    Route::get('admin/print','MbitcoinController@coupon');
+    Route::post('admin/add_user/2','MbitcoinController@add_user2');
+
+    Route::post('admin/print_coupon','MbitcoinController@print_coupon');
 
   });
+
+  Route::get('show_user/', 'BitcoineventController@post_back');
+  Route::get('show_user/2', 'BitcoineventController@post_back2');
+  Route::get('show_user/3', 'BitcoineventController@post_back3');
+  Route::get('show_user/4', 'BitcoineventController@post_back4');
+  Route::get('show_user/5', 'BitcoineventController@post_back5');
+  Route::get('show_user/6', 'BitcoineventController@post_back6');
+  Route::get('show_user/7', 'BitcoineventController@post_back7');
+  Route::get('show_user/8', 'BitcoineventController@post_back8');
+  Route::get('show_user/9', 'BitcoineventController@post_back9');
