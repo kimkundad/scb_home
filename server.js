@@ -29,6 +29,7 @@ io.on('connection', function (socket) {
     io.sockets.emit( 'new_message', {
       code_user: data.code_user,
       name: data.name,
+      email: data.email,
       phone: data.phone,
       company: data.company,
       income_time: data.income_time,

@@ -68,6 +68,14 @@ class MbitcoinController extends Controller
 
        $data['objs'] = $objs;
 
+       $objs_2 = DB::table('members')
+                 ->where('members.groups','distributor')
+                 ->where('members.confirmed',1)
+                  ->where('members.coupon',1)
+                 ->count();
+
+       $data['objs_2'] = $objs_2;
+
 
        $objs_other = DB::table('members')
                 ->where('members.groups','other')
@@ -77,6 +85,14 @@ class MbitcoinController extends Controller
 
        $data['objs_other'] = $objs_other;
 
+       $objs_other_2 = DB::table('members')
+                ->where('members.groups','other')
+                ->where('members.confirmed',1)
+                 ->where('members.coupon',1)
+                 ->count();
+
+       $data['objs_other_2'] = $objs_other_2;
+
 
        $objs_zero = DB::table('members')
                 ->where('members.groups','contractor & supplier')
@@ -85,6 +101,16 @@ class MbitcoinController extends Controller
                  ->count();
 
        $data['objs_zero'] = $objs_zero;
+
+
+
+       $objs_zero_2 = DB::table('members')
+                ->where('members.groups','contractor & supplier')
+                ->where('members.confirmed',1)
+                 ->where('members.coupon',0)
+                 ->count();
+
+       $data['objs_zero_2'] = $objs_zero_2;
 
 
        $data['header'] = 'พิมพ์คูปอง';
@@ -299,6 +325,7 @@ class MbitcoinController extends Controller
      $arr['code_user'] = $get_data->code_user;
      $arr['name'] = $get_data->name;
      $arr['phone'] = $get_data->phone;
+     $arr['email'] = $get_data->email;
      $arr['company'] = $get_data->company;
      $arr['income_time'] = date('Y-m-d H:i:s', strtotime('+7 hour'));
      $arr['groups'] = $get_data->groups;
@@ -347,7 +374,7 @@ class MbitcoinController extends Controller
       $name_user = $request['name_user'];
       $phone = $request['phone'];
       $company = $request['company'];
-
+      $email = $request['email'];
 
       $id = $request['id_user'];
       $upobj = DB::table('members')
@@ -360,6 +387,7 @@ class MbitcoinController extends Controller
             'company' => $company,
             'name' => $name_user,
             'phone' => $phone,
+            'email' => $email,
             'admin_id' => $request['admin_id'],
             'income_time' => date('Y-m-d H:i:s', strtotime('+7 hour'))
           ));
@@ -395,6 +423,7 @@ class MbitcoinController extends Controller
           $arr['code_user'] = $get_data->code_user;
           $arr['name'] = $get_data->name;
           $arr['phone'] = $get_data->phone;
+          $arr['email'] = $get_data->email;
           $arr['company'] = $get_data->company;
           $arr['income_time'] = date('Y-m-d H:i:s', strtotime('+7 hour'));
           $arr['groups'] = $get_data->groups;

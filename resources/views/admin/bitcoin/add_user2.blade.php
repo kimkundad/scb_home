@@ -121,6 +121,12 @@ white-space: normal;
                        </div>
                      </div>
 
+                     <div class="form-group">
+                       <label class="col-md-3 control-label" for="profileCompany">อีเมล์*</label>
+                       <div class="col-md-8">
+                         <input type="email" class="form-control" name="email" value="{{ old('email') }}" id="email" required="">
+                       </div>
+                     </div>
 
 
                      <div class="form-group">
@@ -315,6 +321,7 @@ $('.tooltip_flip.tooltip-effect-1').click(function(e){
 
     var a=$form.find("#name").val();
     var b=$form.find("#phone").val();
+    var e=$form.find("#email").val();
     var c=$form.find("#groups").val();
     var d=$form.find("#company").val();
     if (a==null || a=="",b==null || b=="",c==null || c=="",d==null || d=="")
@@ -329,6 +336,7 @@ $('.tooltip_flip.tooltip-effect-1').click(function(e){
    var dataString = {
           name : $form.find("#name").val(),
           phone : $form.find("#phone").val(),
+          email : $form.find("#email").val(),
           groups : $form.find("#groups").val(),
           company : $form.find("#company").val(),
           _token : '{{ csrf_token() }}'
@@ -345,6 +353,7 @@ $('.tooltip_flip.tooltip-effect-1').click(function(e){
 
           $("#name").val('');
           $("#phone").val('');
+          $("#email").val('');
           $("#groups").val('');
           $("#company").val('');
 
@@ -365,6 +374,7 @@ $('.tooltip_flip.tooltip-effect-1').click(function(e){
               code_user: data.code_user,
               name: data.name,
               phone: data.phone,
+              email: data.email,
               company: data.company,
               income_time: data.income_time,
               groups: data.groups,

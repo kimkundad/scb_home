@@ -65,7 +65,7 @@ white-space: normal;
 <audio id="notif_audio"><source src="{!! asset('sounds/notify.ogg') !!}" type="audio/ogg"><source src="{!! asset('sounds/notify.mp3') !!}" type="audio/mpeg"><source src="{!! asset('sounds/notify.wav') !!}" type="audio/wav"></audio>
 				<section role="main" class="content-body">
 
-					
+
 
 
 					<!-- start: page -->
@@ -219,13 +219,11 @@ white-space: normal;
                      <tr>
                        <th>#</th>
                        <th>ชื่อ-นามสกุล</th>
+                       <th>อีเมล์</th>
                        <th>เบอร์โทร</th>
                        <th>ชื่อบริษัท</th>
                        <th>กลุ่ม</th>
                        <th>เวลา</th>
-
-
-
                      </tr>
                    </thead>
                    <tbody id="message-tbody">
@@ -233,12 +231,10 @@ white-space: normal;
                  @foreach($objs as $u)
                       <tr>
                         <td>ID: {{$u->code_user}}</td>
-
                         <td>
-
                           <a>{{$u->name}}</a>
-
                         </td>
+                        <td>{{$u->email}}</td>
                         <td>{{$u->phone}}</td>
                         <td>{{$u->company}}</td>
 
@@ -293,7 +289,7 @@ socket.on( 'new_count_message', function( data ) {
 
   socket.on( 'new_message', function( data ) {
 
-      $( "#message-tbody" ).prepend('<tr><td>ID: '+data.code_user+'</td><td>'+data.name+'</td><td>'+data.phone+'</td><td>'+data.company+'</td><td>'+data.groups+'</td><td>'+data.income_time+'</td></tr>');
+      $( "#message-tbody" ).prepend('<tr><td>ID: '+data.code_user+'</td><td>'+data.name+'</td><td>'+data.email+'</td><td>'+data.phone+'</td><td>'+data.company+'</td><td>'+data.groups+'</td><td>'+data.income_time+'</td></tr>');
       $('#notif_audio')[0].play();
       console.log(data.income_time);
       $.ajax({

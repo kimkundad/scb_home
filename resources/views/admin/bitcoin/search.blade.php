@@ -222,6 +222,11 @@ white-space: normal;
                           </div>
 
                           <div class="form-group">
+                            <label for="inputPassword3" class=" control-label">อีเมล์</label>
+                            <input type="email" class="form-control" id="email" value="{{$u->email}}" placeholder="info@scb.com">
+                         </div>
+
+                          <div class="form-group">
                             <label for="inputPassword3" class=" control-label">ชื่อบริษัท</label>
                             <input type="text" class="form-control" id="company" value="{{$u->company}}" placeholder="บริษัท สร้างบ้านสวย...">
                          </div>
@@ -299,6 +304,7 @@ $('.tooltip_flip.tooltip-effect-1').click(function(e){
                    id_user : $form.find("#id_user").val(),
                    name_user : $form.find("#name_user").val(),
                    phone : $form.find("#phone").val(),
+                   email : $form.find("#email").val(),
                    company : $form.find("#company").val(),
                    _token : '{{ csrf_token() }}'
                  };
@@ -333,6 +339,7 @@ $('.tooltip_flip.tooltip-effect-1').click(function(e){
               code_user: data.code_user,
               name: data.name,
               phone: data.phone,
+              email: data.email,
               company: data.company,
               income_time: data.income_time,
               groups: data.groups,

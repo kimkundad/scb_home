@@ -99,7 +99,7 @@ white-space: normal;
                         <div class="summary">
                           <h4 class="title" style="font-size: 16px; margin-top: 10px;">Distributor coupon</h4>
                           <div class="info">
-                            <strong class="amount" id="new_count_message">{{$objs}}</strong>
+                            <strong class="amount" id="new_count_message">{{$objs}} / {{$objs_2}}</strong>
                           </div>
                         </div>
 
@@ -124,7 +124,7 @@ white-space: normal;
                         <div class="summary">
                           <h4 class="title" style="font-size: 18px; margin-top: 10px;">C&S coupon</h4>
                           <div class="info">
-                            <strong class="amount" id="new_count_message">{{$objs_zero}}</strong>
+                            <strong class="amount" id="new_count_message">{{$objs_zero}} / {{$objs_zero_2}}</strong>
                           </div>
                         </div>
 
@@ -149,7 +149,7 @@ white-space: normal;
                         <div class="summary">
                           <h4 class="title" style="font-size: 18px; margin-top: 10px;">Other coupon</h4>
                           <div class="info">
-                            <strong class="amount" id="new_count_message">{{$objs_other}}</strong>
+                            <strong class="amount" id="new_count_message">{{$objs_other}} / {{$objs_other_2}}</strong>
                           </div>
                         </div>
 
