@@ -61,7 +61,7 @@ class BitcoineventController extends Controller
 
 
   $data['objs'] = NULL;
-    $data['objs'] = $objs;
+
 
 
       return view('bitcoin_event.post_back6',$data);

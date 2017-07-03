@@ -173,6 +173,30 @@ white-space: normal;
                 </section>
                 </div>
 
+
+                <div class="col-md-6">
+                  <section class="panel panel-featured-left panel-featured-primary">
+                  <div class="panel-body">
+                    <div class="widget-summary">
+                      <div class="widget-summary-col widget-summary-col-icon">
+                        <div class="summary-icon bg-primary">
+                          <i class="fa fa-user"></i>
+                        </div>
+                      </div>
+                      <div class="widget-summary-col">
+                        <div class="summary">
+                          <h4 class="title" style="font-size: 18px; margin-top: 10px;">จำนวน walk in ทั้งหมด</h4>
+                          <div class="info">
+                            <strong class="amount" >{{$count_user_walk}}</strong>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                </div>
+
 							<div class="col-xs-12">
 
 						<section class="panel">

@@ -244,12 +244,12 @@ outline: 0 none;
               $("#text-show").html("");
               $( "#text-show" ).prepend('<h1 class="text-center" style="font-size:75px;  padding-top: 350px; margin-top: 0px; margin-bottom: 0px; text-align: center;">'+data.name+'</h1><h4 style="font-size:40px; text-align: center; margin-top: 0px; margin-bottom: 0px;">'+data.company+'</h4>');
 
-            var delayMillis = 1600;
+            var delayMillis = 9000;
             setTimeout(function() {
               $("#text-show").html("");
               $( "#text-show" ).prepend('<h1 class="text-center" style="font-size:100px;  padding-top: 350px; margin-top: 0px; margin-bottom: 0px; text-align: center;">ลงทะเบียนเรียบร้อย</h1>');
 
-              var delayMilli = 1200;
+              var delayMilli = 2000;
 
                 setTimeout(function() {
                   $("#text-show").html("");

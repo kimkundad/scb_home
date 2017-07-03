@@ -154,54 +154,6 @@ outline: 0 none;
 
 
 
-<!--
-    <section class="sc-blue">
-      <div class="container">
-        <div class="text-center">
-          <h2>รายชื่อผู้มาลงทะเบียนหน้างาน</h2>
-          <p class="title-sub"><b>หมายเหตุ* </b>ผู้เข้าร่วมสัมมนาจะได้รับแจก Bitcoin ในวันงาน (ต้องมีบัญชี Blockchain)</p>
-        </div>
-
-        @if($objs)
-
-        <div class="row img-circle" style="margin-top: 0px;" id="message-tbody">
-
-          @foreach($objs as $u)
-
-          <div class="col-md-2" style="margin-top: 30px;">
-            <div class="col-md-4" style=" padding-right: 5px; padding-left: 5px; ">
-              <a href="https://www.facebook.com/{{$u->provider_user_id}}" target="_blank">
-                <img src="//graph.facebook.com/{{$u->provider_user_id}}/picture?width=300&height=300" class="img-circle img-responsive center-block" >
-            </a>
-            </div>
-            <div class="col-md-8" style="margin-top: 5px; padding-right: 5px; padding-left: 5px;">
-              <a href="https://www.facebook.com/{{$u->provider_user_id}}" target="_blank" style="text-decoration: none;">
-                <p style="margin: 0 0 0px; font-size: 15px;">{{$u->name_bit}}</p>
-              <p style="margin: 0 0 0px; line-height: 1.2em;">{{$u->nickname_bit}}</p></a>
-            </div>
-          </div>
-
-          @endforeach
-
-       </div>
-
-
-
-         @endif
-
-
-
-      </div>
-    </section>
-
-
-
--->
-
-
-
-
-
 
 
 
@@ -244,12 +196,12 @@ outline: 0 none;
               $("#text-show").html("");
               $( "#text-show" ).prepend('<h1 class="text-center" style="font-size:75px;  padding-top: 350px; margin-top: 0px; margin-bottom: 0px; text-align: center;">'+data.name+'</h1><h4 style="font-size:40px; text-align: center; margin-top: 0px; margin-bottom: 0px;">'+data.company+'</h4>');
 
-            var delayMillis = 1600;
+            var delayMillis = 9000;
             setTimeout(function() {
               $("#text-show").html("");
               $( "#text-show" ).prepend('<h1 class="text-center" style="font-size:100px;  padding-top: 350px; margin-top: 0px; margin-bottom: 0px; text-align: center;">ลงทะเบียนเรียบร้อย</h1>');
 
-              var delayMilli = 1200;
+              var delayMilli = 2000;
 
                 setTimeout(function() {
                   $("#text-show").html("");

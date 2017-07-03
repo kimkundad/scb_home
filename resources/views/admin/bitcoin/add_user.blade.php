@@ -141,7 +141,7 @@ white-space: normal;
                      <div class="form-group">
                        <label class="col-md-3 control-label" for="profileFirstName">กลุ่ม*</label>
                        <div class="col-md-8">
-                         <select class="form-control mb-md" name="groups" id="groups">
+                         <select class="form-control mb-md" name="groups" id="groups" required="">
                            <option value="">--เลือกชื่อกลุ่ม--</option>
 														<option value="0">ไม่มีกลุ่ม</option>
 														<option value="1">Distributor</option>

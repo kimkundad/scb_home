@@ -27,6 +27,8 @@ class DashboardController extends Controller
 
     $count_user_all = member::where('members.confirmed', 0)->count();
 
+    $count_user_walk = member::where('members.groups', 'other')->count();
+
   //  dd($count_user_all);
     //$objs = bitcoin::paginate(15);
     $objs = DB::table('members')
@@ -41,6 +43,7 @@ class DashboardController extends Controller
     $data['objs'] = $objs;
     $data['count_user'] = $count_user;
     $data['count_user_all'] = $count_user_all;
+    $data['count_user_walk'] = $count_user_walk;
     return view('admin.dashboard.index', $data);
   }
 }

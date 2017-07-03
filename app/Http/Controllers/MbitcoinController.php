@@ -201,6 +201,7 @@ class MbitcoinController extends Controller
     public function store_user(Request $request)
     {
       $name = $request['name'];
+      $email = $request['email'];
       $phone = $request['phone'];
       $groups = $request['groups'];
       $company = $request['company'];
@@ -290,6 +291,7 @@ class MbitcoinController extends Controller
        $package->char_user = 'NEW';
        $package->name = $name;
        $package->phone = $phone;
+       $package->email = $email;
        $package->groups = $groups;
        $package->income_time = date('Y-m-d H:i:s', strtotime('+7 hour'));
        $package->save();
